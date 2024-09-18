@@ -47,6 +47,23 @@
     font-weight: 800;
     text-align: center;
 }
+.scale-in-center {
+    opacity: 0;
+    transform: scale(0); /* يبدأ بحجم صغير من المنتصف */
+    animation: scaleIn 0.3s forwards; /* مدة الحركة 1 ثانية */
+  }
+  
+  /* Keyframes لتأثير التكبير */
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0); /* تبدأ بحجم 0 */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* تصل إلى حجمها الطبيعي */
+    }
+  }
 /* حركة الديفات من اليمين */
 .slide-in-right {
     opacity: 0;
@@ -82,46 +99,3 @@
       opacity: 1;
     }
   }
-  /* كود الأنيميشن لظهور الصورة من المنتصف */
-.scale-in-center {
-    opacity: 0;
-    transform: scale(0); /* يبدأ بحجم صغير من المنتصف */
-    animation: scaleIn 0.3s forwards; /* مدة الحركة 1 ثانية */
-  }
-  
-  /* Keyframes لتأثير التكبير */
-  @keyframes scaleIn {
-    0% {
-      opacity: 0;
-      transform: scale(0); /* تبدأ بحجم 0 */
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1); /* تصل إلى حجمها الطبيعي */
-    }
-  }
-  /* الأنيميشن لحركة العناصر من اليمين إلى اليسار */
-.slide-in-right {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 1s, opacity 1s;
-  }
-  
-  /* الأنيميشن لحركة العناصر من اليسار إلى اليمين */
-  .slide-in-left {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: transform 1s, opacity 1s;
-  }
-  
-  /* عندما تصبح العناصر مرئية */
-  .box {
-    
-    opacity: 0;
-    transform: translateY(100px); /* ابدأ من أسفل */
-    transition: all 0.5s ease-out; /* الانتقال السلس */
-}
-.box.show {
-  opacity: 1;
-  transform: translateY(0); /* الانتقال إلى الموقع الأصلي */
-}
