@@ -131,10 +131,13 @@ p {
 }
 .h-head {
   background-color: chocolate; /* Fallback for older browsers */
-  background: linear-gradient(to right, chocolate 10%, gold 100%) ;
-  background-clip: text !important;
-  color: transparent !important;
+  background: -webkit-linear-gradient(to right, chocolate 10%, gold 100%); /* For WebKit browsers */
+  background: linear-gradient(to right, chocolate 10%, gold 100%); /* Standard gradient */
+  -webkit-background-clip: text; /* For Safari and Chrome */
+  background-clip: text; /* Standard property */
+  color: transparent; /* Make text transparent to show gradient */
   margin: 0 5px;
+  
 }
 .h-h-i {
   font-size: 20px;
