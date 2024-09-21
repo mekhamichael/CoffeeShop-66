@@ -130,7 +130,8 @@ p {
   margin-top: 0;
 }
 .h-head {
-  background: linear-gradient(to right, chocolate 10%, gold 100%) !important;
+  background-color: chocolate; /* Fallback for older browsers */
+  background: linear-gradient(to right, chocolate 10%, gold 100%) ;
   background-clip: text !important;
   color: transparent !important;
   margin: 0 5px;
