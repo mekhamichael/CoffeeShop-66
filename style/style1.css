@@ -136,6 +136,7 @@ p {
   -webkit-background-clip: text; /* For Safari and Chrome */
   background-clip: text; /* Standard property */
   color: transparent; /* Make text transparent to show gradient */
+  -webkit-text-fill-color: transparent; /* Important to ensure the text stays transparent on WebKit browsers */
   margin: 0 5px;
   
 }
