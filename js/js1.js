@@ -11,7 +11,7 @@ function handleDiv(divId, storageKey, initialValue) {
     let currentTime = new Date().getTime(); // الوقت الحالي بالمللي ثانية
 
     // إذا لم يكن هناك زيارة سابقة أو إذا مر وقت طويل منذ الزيارة الأخيرة، اعتبرها زيارة جديدة
-    if (!lastVisit || currentTime - lastVisit > 5 * 1000) { // مرور 24 ساعة أو أكثر
+    if (!lastVisit || currentTime - lastVisit > 9 *60*60* 1000) { // مرور 24 ساعة أو أكثر
         count++; // زيادة الرقم بمقدار 1
         localStorage.setItem(storageKey, count); // تخزين الرقم الجديد
         localStorage.setItem(storageKey + '_lastVisit', currentTime); // تحديث وقت الزيارة الأخيرة
@@ -26,3 +26,4 @@ handleDiv('count5', 'count5', 70); // الديف الثالث يبدأ من 150
 handleDiv('count6', 'count6', 80); // الديف الثالث يبدأ من 150
 handleDiv('count7', 'count7', 90); // الديف الثالث يبدأ من 150
 handleDiv('count8', 'count8', 20); // الديف الثالث يبدأ من 150
+handleDiv('count9', 'count9', 20); // الديف الثالث يبدأ من 150
