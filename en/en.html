@@ -22,9 +22,9 @@
   </head>
 
   <body>
-    <div id="company-header" class="nqt-bg-primary con">
+    <div id="company-header" class="nqt-bg-primary con"  style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imgs/our-place/bg.png);">
       <div id="company-logo" class="flex justify-center items-center logo scale-in-center">
-        <img alt="coffeeshop 66" src="../imgs/home/logo.png" width="150" height="150" draggable="false"/>
+        <img alt="coffeeshop 66" src="../imgs/home/logo.png" width="150" height="150" />
       </div>
       <div id="company-name" class="con">
         <h1 class="text-2xl my-3 h-head h-h-i scale-in-center">COFFEESHOP 66</h1>
@@ -533,10 +533,16 @@
     <!-- ///////////////////////////////////////////// New Drinks  ///////////////////////////////////////////////// -->
 <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script>
-  $(document).on('turbolinks:load', function() {
-    const observer = lozad();
-    observer.observe();
-  })
+   $(document).on('turbolinks:load', function () {
+      const observer = lozad();
+      observer.observe();
+    })
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+})
 </script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">

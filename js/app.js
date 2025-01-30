@@ -34,17 +34,6 @@
 		factory( global );
 	}
 
-	function scrollToTop(event) {
-		event.preventDefault();
-		document.querySelector('#section').scrollIntoView({
-			behavior: 'smooth',
-			block: 'start'
-		});
-	}
-	window.scrollTo({
-		top: 0,
-		behavior: 'smooth'
-	});
 // Pass this if window is not defined yet
 } )( typeof window !== "undefined" ? window : this, function( window, noGlobal ) {
 
@@ -30018,30 +30007,4 @@ $(document).on('turbolinks:load', function() {
   $('#register-close').click(function (event) {
     $('#registration-modal').modal('hide');
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
-	// تحديد جميع العناصر التي تحتوي على class 'slide-in-right' أو 'slide-in-left'
-	const elements = document.querySelectorAll('.slide-in-right, .slide-in-left');
-  
-	// إعداد الـ Intersection Observer
-	const observer = new IntersectionObserver((entries, observer) => {
-	  entries.forEach(entry => {
-		// إذا كانت العناصر مرئية ضمن الشاشة
-		if (entry.isIntersecting) {
-		  entry.target.classList.add('visible'); // إضافة class 'visible' لتفعيل الأنيميشن
-		  observer.unobserve(entry.target); // إلغاء المراقبة بعد عرض العنصر لتحسين الأداء
-		}
-	  });
-	}, {
-	  threshold: 0.5 // نصف العنصر يجب أن يكون مرئي لتفعيل الأنيميشن
-	});
-  
-	// مراقبة كل عنصر
-	elements.forEach(element => {
-	  observer.observe(element);
-	});
-  });
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
 });

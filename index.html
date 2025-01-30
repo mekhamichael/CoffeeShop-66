@@ -9,7 +9,7 @@
     <link rel="stylesheet" media="all" href="style/style1.css" data-turbolinks-track="reload" />
     <link rel="stylesheet" media="screen" href="style/style2.css" data-turbolinks-track="reload" />
     <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/all.css">
+    <link rel="stylesheet" href="style/all.css">
     <link rel="icon" type="image/png" href="imgs/home/logo.png">
 
 
@@ -531,7 +531,9 @@
   <span class="text-center d-block title text-dark "style="font-size: 1.2rem;font-weight: bold; ">جميع الاسعار يضاف اليها :-  
      <p class="mekha m-0 " style="color: rgb(244, 106, 8); font-size: 1.2rem;font-weight: bold;"> ( 14 % ضريبة ) + ( 6 % خدمة )</p> 
   </span>
-    <br>
+
+<br>
+
 <span class="text-center d-block title text-dark"  style="direction: ltr;" > developed by eng /
 
   <a href="https://mekhamichael.github.io/MEKHA.COM/" target="_blank"> <span class="mekha m-0 h-head" style="color: chocolate;">&nbsp; <i class="fa-solid fa-globe"></i> &nbsp &nbsp Michael Mekha Maximous <span style="direction: ltr;"></span> <br>
@@ -551,27 +553,20 @@
   
 </span>
 
-</span>  
-
+</span> 
 <script>
-  $(document).on('turbolinks:load', function() {
-    const observer = lozad();
-    observer.observe();
-  })
+        $(document).on('turbolinks:load', function () {
+      const observer = lozad();
+      observer.observe();
+    })
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+})
 </script>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script>
-      function scrollToTop(event) {
-          event.preventDefault();
-          document.querySelector('#section').scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-          });
-      }
-  </script>
-      <script src="js/js1.js"></script>
   </body>
 
 </html>
